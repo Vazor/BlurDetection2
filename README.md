@@ -3,6 +3,14 @@ Blur Detection works using the total variance of the laplacian of an
 image, this provides a quick and accurate method for scoring how blurry
 an image is.
 
+```bash
+# in Ubuntu
+sudo apt-get install -yq libopencv-dev python-opencv
+# in OS X
+brew tap homebrew/science && brew install opencv3 --with-contrib --with-python3 --HEAD
+
+```
+
 
 The repository has two main scripts, `single.py` and `batch.py`, which
 use the same blur detection method located in `blur_detection`. The
