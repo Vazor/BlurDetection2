@@ -1,5 +1,5 @@
 install_deps:
-	apt-get install -yq libopencv-dev python-opencv && pip install -U -r requirements.txt
+	sudo apt-get install -yq libopencv-dev python-opencv && sudo pip install -U -r requirements.txt
 
 install:
 	pip install ./
