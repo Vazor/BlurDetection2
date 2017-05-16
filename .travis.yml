@@ -1,8 +1,6 @@
 language: python
 
 dist: trusty
-sudo: required
-
 
 matrix:
   include:
@@ -19,7 +17,10 @@ matrix:
     - python: "3.6-dev"
     - python: "nightly"
 
-before_script:
+before_install:
+  - sudo apt-get update -yq
+  - sudo apt-get install python-opencv
+  - sudo dpkg -L python-opencv
   - make install_deps
 
 script:
